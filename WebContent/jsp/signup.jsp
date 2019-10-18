@@ -1,6 +1,3 @@
-<%@page import="java.sql.Statement"%>
-<%@page import="com.bdi.test.common.DBCon"%>
-<%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -10,41 +7,16 @@
 <title>Signup</title>
 </head>
 <body>
-<%
-String id = request.getParameter("id"); 
-String pwd = request.getParameter("pwd");
-String name = request.getParameter("name");
-String age = request.getParameter("age");
-String etc = request.getParameter("etc");
-
-if(id!=null){
-	out.println("니가 입력한 아이디 : " + id + "<br>");
-	out.println("니가 입력한 pwd : " + pwd + "<br>");
-	out.println("니가 입력한 name : " + name + "<br>");
-	out.println("니가 입력한 age : " + age + "<br>");
-	out.println("니가 입력한 etc : " + etc + "<br>");
-	
-	Connection con = DBCon.getCon(); //ctrl space 두개 다 
-	Statement stmt = con.createStatement();
-	String sql = "insert into user_info(ui_id,ui_pwd,ui_name,ui_age,ui_etc)";
-	sql += " values('" + id + "','" + pwd + "','" + name + "','" + age + "','" + etc + "')";
-	int result = stmt.executeUpdate(sql); 
-	if(result==1){
-		out.println("회원가입완료"); //누군가 try catch를 해주고있음.
-	}
-	con.commit();//전화끊음(없애는게아님) 후에 다시 getCon하면 안걸려있는상태임(1핸폰 없애던가, 2다시 걸던가 해야함)
-}
-
-%> 
-	<form>
-		ID:<input type = "text" name = "id"> <br>
+	<form method="get" action="/bdi-web/jsp/signup_ok.jsp"> <!--패런트노드,차일드노드
+	action="signup_ok.jsp 를넣어주면 같은 jsp폴더 내에 있으니(상대경로) relative path, 
+	절대경로 exolete path-> (root)/bdi web/jsp/signup 그래서 root부터 시작하는게 중요!경로는무조건 절대경로-->
+		ID:<input type = "text" name = "id"> <br> <!-- 같은인풋 다른속성 달라서 다른일을 함 -->
 		Password : <input type = "password" name = "pwd"> <br> <!-- 비번 한글안먹음 -->
 		Name : <input type = "text" name = "name"> <br> 
 		Age : <input type = "number" name = "age"> <br> <!-- 숫자밖에안들어감 -->
 		Etc : <textarea name = "etc"></textarea><br>
 		<button>Signup</button> 
 	</form>
-	
 </body>
 </html>
 
@@ -68,7 +40,7 @@ html에서 ? 를 get방식이라한다(표준). 뭔가를 조회할때,검색할
 
 ""와 null은 다르다
 
-전화를 빨리 
+
 
 -->
 
