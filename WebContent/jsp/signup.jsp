@@ -8,18 +8,17 @@
 </head>
 <body>
 	<form method="get" action="/bdi-web/jsp/signup_ok.jsp"> <!--패런트노드,차일드노드
-	action="signup_ok.jsp 를넣어주면 같은 jsp폴더 내에 있으니(상대경로) relative path, 
-	절대경로 exolete path-> (root)/bdi web/jsp/signup 그래서 root부터 시작하는게 중요!경로는무조건 절대경로-->
-		ID:<input type = "text" name = "id"> <br> <!-- 같은인풋 다른속성 달라서 다른일을 함 -->
-		Password : <input type = "password" name = "pwd"> <br> <!-- 비번 한글안먹음 -->
+															action="signup_ok.jsp 를넣어주면 같은 jsp폴더 내에 있으니(상대경로) relative path, 
+															절대경로 exolete path-> (root)/bdi web/jsp/signup 그래서 root부터 시작하는게 중요!경로는무조건 절대경로-->
+		ID:<input type = "text" name = "id"> <br> 				<!-- 같은인풋 다른속성 달라서 다른일을 함 -->
+		Password : <input type = "password" name = "pwd"> <br> 	<!-- 비번 한글안먹음 -->
 		Name : <input type = "text" name = "name"> <br> 
-		Age : <input type = "number" name = "age"> <br> <!-- 숫자밖에안들어감 -->
+		Age : <input type = "number" name = "age"> <br> 		<!-- 숫자밖에안들어감 -->
 		Etc : <textarea name = "etc"></textarea><br>
 		<button>Signup</button> 
 	</form>
 </body>
 </html>
-
 
 <!--
 버튼 태그가 폼태그 안에있어야한다.
