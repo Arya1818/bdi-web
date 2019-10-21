@@ -2,9 +2,9 @@ package com.bdi.test.test01;
 
 class Mother2{
 	int a = 3; 
-	
 	Mother2(){
 		System.out.println("엄마1");
+
 	}
 	Mother2(int a){
 		System.out.println("엄마2");
@@ -13,9 +13,10 @@ class Mother2{
 
 public class MethodTest extends Mother2{
 	int a = 123;
+
 	MethodTest(int a){
 	//	super();
-	//	super(2);
+		super(2);
 		System.out.println("난실행되겠지");
 	}
 	
