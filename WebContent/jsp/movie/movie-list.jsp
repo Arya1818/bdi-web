@@ -33,6 +33,7 @@ ResultSet rs = ps.executeQuery();
 	<th>연령등급</th>
 	<th>영화평점</th>
 	<th>삭제</th>
+	<th>수정</th>
 </tr>
 
 <%
@@ -46,6 +47,7 @@ while(rs.next()){
 	out.println("<td>" + rs.getString("mi_age") + "</td>");
 	out.println("<td>" + rs.getString("mi_star_rate") + "</td>");
 	out.println("<td><a href = \"/bdi-web/jsp/movie/movie-delete.jsp" + "?mi_num=" + rs.getString("mi_num") + "\"><button>삭제</button></a></td>");
+	out.println("<td><a href = \"/bdi-web/jsp/movie/movie-update.jsp" + "?mi_num=" + rs.getString("mi_num") + "\"><button>수정</button></a></td>");
 	out.println("</tr>");
 }
 %>

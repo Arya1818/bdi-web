@@ -20,14 +20,7 @@
 		String age = request.getParameter("mi_age");
 		String star_rate = request.getParameter("mi_star_rate");
 
-		// if(num!=null){
-		// 	out.println("니가 입력한 번호 : " + num + "<br>");
-		// 	out.println("니가 입력한 영화제목 : " + name + "<br>");
-		// 	out.println("니가 입력한 티켓가격 : " + price + "<br>");
-		// 	out.println("니가 입력한 개봉일 : " + date + "<br>");
-		// 	out.println("니가 입력한 영화설명 : " + desc + "<br>");
-		// 	out.println("니가 입력한 연령등급 : " + age + "<br>");
-		// 	out.println("니가 입력한 영화평점 : " + star_rate + "<br>");
+		
 		String sql = "insert into movie_info(mi_num,mi_name,mi_price,mi_date,mi_desc,mi_age,mi_star_rate)";
 		sql += " values('" + num + "','" + name + "','" + price + "','" + date + "','" + desc + "','" + age + "','"
 				+ star_rate + "')";
