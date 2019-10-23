@@ -48,7 +48,7 @@ if(search!=null){
 sql += " order by ui_num asc";
 Connection con = DBCon.getCon();
 PreparedStatement ps = con.prepareStatement(sql);
-if(search!=null){
+if(search!=null){ //더 정확하게 하려고 추가해줌
 	if("ui_name".equals(search)||"ui_id".equals(search)||"ui_age".equals(search)){
 		ps.setString(1,"%" + searchStr + "%");
 	}

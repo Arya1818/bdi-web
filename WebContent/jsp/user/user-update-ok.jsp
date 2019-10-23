@@ -38,8 +38,8 @@
 	ps.setString(3,name);
 	ps.setString(4,age);
 	ps.setString(5,etc);
-	ps.setString(6,num);
-	ps.setString(7,hobby);
+	ps.setString(6,hobby);
+	ps.setString(7,num);
 
 	int result = ps.executeUpdate();
 	if (result == 1) {

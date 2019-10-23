@@ -26,10 +26,11 @@
 		String name = request.getParameter("ui_name");
 		String age = request.getParameter("ui_age");
 		String etc = request.getParameter("ui_etc");
-		String hob = request.getParameter("hobby");
+//		String hob = request.getParameter("hobby");
 
 		
-		String sql = "insert into user_info(ui_num,ui_id,ui_pwd,ui_name,ui_age,ui_etc,hobby)"+" values(seq_ui_num.nextval,?,?,?,?,?,?)";
+		String sql = "insert into user_info(ui_num,ui_id,ui_pwd,ui_name,ui_age,ui_etc,hobby)"
+						+" values(seq_ui_num.nextval,?,?,?,?,?,?)";
 //		System.out.println(sql);
 		Connection con = DBCon.getCon();
 		PreparedStatement ps = con.prepareStatement(sql);
@@ -38,7 +39,7 @@
 		ps.setString(3,name);
 		ps.setString(4,age);
 		ps.setString(5,etc);
-		ps.setString(6,hob);
+		ps.setString(6,hobby);
 
 		int result = ps.executeUpdate();
 		if (result == 1) {

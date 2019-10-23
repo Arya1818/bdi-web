@@ -11,11 +11,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <%
 String id = request.getParameter("id");
 String pwd = request.getParameter("pwd");
 if(id!=null){ //빈문자열이 전송된것임
-	String sql = "select * from user_info where ui_id = ? and ui_pwd = ?"; //자동으로 ''에 묶임?? , ?만
+	String sql = "select * from user_info where ui_id=? and ui_pwd=?"; //?는 자동으로 ''에 묶임. (?만)
 	Connection con = DBCon.getCon();
 	PreparedStatement ps = con.prepareStatement(sql);
 	ps.setString(1,id); //첫번째 물음표에 id set하렴 , id가 unique이기 때문에 re next 한번 돌아야함 (if문에 돌려도됨)
@@ -37,11 +38,13 @@ if(id!=null){ //빈문자열이 전송된것임
 	<form method = "post" > <!-- 값이 가긴 하는데 주소로인해 가는게 아님 -->
 		아이디 : <input type = "text" name = "id"> <br>
 		비밀번호 : <input type = "password" name = "pwd"> <br>
-		<button>로그인</button><br> <!-- 폼태그안에 있어야함 -->
+		<button>로그인</button> <!-- 폼태그안에 있어야함 -->
 	</form>
-	<form method = "get" action = "/bdi-web/jsp/user/user-insert.jsp" > <!-- 값이 가긴 하는데 주소로인해 가는게 아님 -->
+	<form method = "get" action = "/bdi-web/jsp/user/user-insert.jsp" > 
 		<button>회원가입</button>
 	</form>
-	
+	<form method = "get" action = "/bdi-web/jsp/user/user-list2.jsp" > 
+		<button>회원정보보기</button>
+	</form>
 </body>
 </html>

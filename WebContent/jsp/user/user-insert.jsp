@@ -32,10 +32,10 @@
 			<tr>
 				<th>hobby<br></th>
 				<td>
-					<input type ="checkbox" name ="hobby" value="study">공부
-					<input type ="checkbox" name ="hobby" value="game">게임
 					<input type ="checkbox" name ="hobby" value="movie">영화
+					<input type ="checkbox" name ="hobby" value="game">게임
 					<input type ="checkbox" name ="hobby" value="music">음악
+					<input type ="checkbox" name ="hobby" value="drawing">그림
 				</td>
 			</tr>
 		</table>

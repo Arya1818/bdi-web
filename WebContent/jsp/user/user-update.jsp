@@ -53,10 +53,10 @@ if(!rs.next()){   //re.next에서 나오는 값은 true or false //false일때
 			</tr>
 			<tr>
 				<th>hobby<br></th>
-				<th><input type="text" name="hobby" value="movie">영화
-					<input type="text" name="hobby" value="game">게임
-					<input type="text" name="hobby" value="music">음악
-					<input type="text" name="hobby" value="drawing">그림
+				<th><input type="checkbox" name="hobby" value="movie">영화
+					<input type="checkbox" name="hobby" value="game">게임
+					<input type="checkbox" name="hobby" value="music">음악
+					<input type="checkbox" name="hobby" value="drawing">그림
 				</th>
 			</tr>
 			<tr>
