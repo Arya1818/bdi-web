@@ -12,9 +12,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<form method = "get" action ="/bdi-web/jsp/movie/movie-insert-ok.jsp">
 	<table border = "1">
-		
-			<form method = "get" action ="/bdi-web/jsp/movie/movie-insert-ok.jsp">
 		<tr>	
 			<th>번호<br></th>
 			<th><input type ="number" name ="mi_num"></th>
@@ -43,10 +42,9 @@
 			<th>영화평점<br></th>
 			<th><input type ="number" name ="mi_star_rate"></th>
 		</tr>
-				<button>입력</button>
-			</form>
-		</tr>
-	</table>
-
+		</table>
+			
+		<button>입력</button> <!-- 폼태그안에있어야함  -->
+	</form>
 </body>
 </html>
