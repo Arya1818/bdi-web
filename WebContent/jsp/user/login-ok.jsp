@@ -15,7 +15,7 @@
 String id = request.getParameter("id");
 String pwd = request.getParameter("pwd");
 if(id!=null){ //빈문자열이 전송된것임
-	String sql = "select * from user_info where ui_id = ? and ui_pwd = ?"; //자동으로 ''에 묶임?? , ?만
+	String sql = "select * from user_info where ui_id = ? and ui_pwd = ?"; //자동으로 ''에 묶임, ?만
 	Connection con = DBCon.getCon();
 	PreparedStatement ps = con.prepareStatement(sql);
 	ps.setString(1,id); //첫번째 물음표에 id set하렴 , id가 unique이기 때문에 re next 한번 돌아야함 (if문에 돌려도됨)

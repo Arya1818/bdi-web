@@ -22,11 +22,11 @@
 	String etc = request.getParameter("ui_etc");
 	String num = request.getParameter("ui_num");
 	String[] hobbies = request.getParameterValues("hobby");
-	String hobby = "";
+	String hob = "";
 	for(int i=0; i<hobbies.length; i++){
-		hobby += hobbies[i]+",";
+		hob += hobbies[i]+",";
 	}
-	hobby = hobby.substring(0,hobby.length()-1);
+	hob = hob.substring(0,hob.length()-1);
 	
 	String sql = "update user_info set ui_id=?, ui_pwd=?, ui_name=?, ui_age=?, ui_etc=?, hobby=? where ui_num=?";
 	Connection con = DBCon.getCon();
@@ -38,7 +38,7 @@
 	ps.setString(3,name);
 	ps.setString(4,age);
 	ps.setString(5,etc);
-	ps.setString(6,hobby);
+	ps.setString(6,hob);
 	ps.setString(7,num);
 
 	int result = ps.executeUpdate();

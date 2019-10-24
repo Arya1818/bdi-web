@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method = "post" action = "/bdi-web/jsp/user/user-insert-ok.jsp">
+	<form method = "post" action = "/bdi-web/jsp/user/user-insert-ok.jsp"> <!-- insert할 땐 post사용, update할 땐 엄밀히말하면 post가 아니지만 지금은 그렇게 씀-->
 		<table border = "1">
 			<tr>
 				<th>아이디<br></th>

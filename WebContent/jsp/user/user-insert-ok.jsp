@@ -13,15 +13,15 @@
 <body>
 	<%
 		request.setCharacterEncoding("utf-8");
-		String[] hobbies = request.getParameterValues("hobby");
-		String hobby = "";
+		String[] hobbies = request.getParameterValues("hobby"); //hobby라는 파라메터를 가져와라. request는 변수.
+		String hob = "";
 		for(int i=0; i<hobbies.length; i++){
-			hobby += hobbies[i]+",";
+			hob += hobbies[i]+",";
 		}
-		hobby = hobby.substring(0,hobby.length()-1);
-		out.println(hobby);
+		hob = hob.substring(0,hob.length()-1);
+		out.println(hob);
 	
-		String id = request.getParameter("ui_id");
+		String id = request.getParameter("ui_id"); //""라면 null 값이 돈다.
 		String pwd = request.getParameter("ui_pwd");
 		String name = request.getParameter("ui_name");
 		String age = request.getParameter("ui_age");
@@ -39,7 +39,7 @@
 		ps.setString(3,name);
 		ps.setString(4,age);
 		ps.setString(5,etc);
-		ps.setString(6,hobby);
+		ps.setString(6,hob);
 
 		int result = ps.executeUpdate();
 		if (result == 1) {

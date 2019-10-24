@@ -5,6 +5,18 @@
 <%@page import="java.sql.Connection"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%! //선언문의 위치는 어디든 됨 하지만 위에있는게좋음
+public String checkStr(String str, String targetStr){ //내가만든 메서드, string class는 final class ->상속받을수없음
+	String[] strs = str.split(",");
+	for(String s:strs){ //String s에 strs에 있는 값들을 하나씩 대입한후 if 문으로 targegStr과 비교
+		if(s.equals(targetStr)){ //while로해도되지만 이게 더 합리적임
+			return "checked"; //string이라고 불리느 값을 가지고 메서드를 빠져나감
+		}
+	}
+	return "";//string이라고 불리느 값을 가지고 메서드를 빠져나감 <%="" 출력은하는데 아무것도 안보이는것임. 
+}
+
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -53,10 +65,11 @@ if(!rs.next()){   //re.next에서 나오는 값은 true or false //false일때
 			</tr>
 			<tr>
 				<th>hobby<br></th>
-				<th><input type="checkbox" name="hobby" value="movie">영화
-					<input type="checkbox" name="hobby" value="game">게임
-					<input type="checkbox" name="hobby" value="music">음악
-					<input type="checkbox" name="hobby" value="drawing">그림
+				<th>
+					<input type="checkbox" name="hobby" value="movie" <%=checkStr(rs.getString("hobby"),"movie")%>>영화
+					<input type="checkbox" name="hobby" value="game" <%=checkStr(rs.getString("hobby"),"game")%>>게임
+					<input type="checkbox" name="hobby" value="music" <%=checkStr(rs.getString("hobby"),"music")%>>음악
+					<input type="checkbox" name="hobby" value="drawing" <%=checkStr(rs.getString("hobby"),"drawing")%>>그림
 				</th>
 			</tr>
 			<tr>
@@ -67,6 +80,7 @@ if(!rs.next()){   //re.next에서 나오는 값은 true or false //false일때
 <%
 }
 %>	
+
 </form>
 </body>
 </html>
