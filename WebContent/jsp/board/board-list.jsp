@@ -11,7 +11,7 @@
 <title>문의게시판</title>
 </head>
 <body>
-
+<h2 align="center">문의게시판</h2>
 	<form>
 		<select name ="search">
 			<option value ="1">제목</option>
@@ -82,7 +82,7 @@ ResultSet rs = ps.executeQuery();
 while(rs.next()){
 
 %>
-	<tr>
+	<tr >
 		<td><%=rs.getString("bi_num")%></td>
 		<td><%=rs.getString("bi_title")%></td>
 		<td><%=rs.getString("bi_user")%></td>

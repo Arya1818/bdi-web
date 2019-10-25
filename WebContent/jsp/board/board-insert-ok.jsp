@@ -25,7 +25,7 @@ String user = request.getParameter("bi_user");
 String content = request.getParameter("bi_content");
 
 String sql = "insert into board_info(bi_num,bi_title,bi_user,bi_content,bi_credat,bi_cretim,bi_moddat,bi_modtim)"
-		+" values(seq_ui_num.nextval,?,?,?,TO_CHAR(SYSDATE,'YYYYMMDD'),TO_CHAR(SYSDATE,'HH24MISS'),TO_CHAR(SYSDATE,'YYYYMMDD'),TO_CHAR(SYSDATE,'HH24MISS'))";
+		+" values(seq_bi_num.nextval,?,?,?,TO_CHAR(SYSDATE,'YYYYMMDD'),TO_CHAR(SYSDATE,'HH24MISS'),TO_CHAR(SYSDATE,'YYYYMMDD'),TO_CHAR(SYSDATE,'HH24MISS'))";
 
 Connection con = DBCon.getCon();
 PreparedStatement ps = con.prepareStatement(sql);
