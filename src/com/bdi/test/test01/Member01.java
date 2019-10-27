@@ -13,6 +13,7 @@ public class Member01 {
 	public static void main(String[] args) {
 //		final String str = test(); //접근제어자 
 		String str = test(); //원래는  Member01.test() 해아하는데 static이니 가능. 
+//		System.out.println(str);
 		Member01 m = new Member01();
 		m.a = 10; //
 		System.out.println(m.a);

@@ -9,6 +9,11 @@ class Mother2{
 	Mother2(int a){
 		System.out.println("엄마2");
 	}
+	void test(int a, int b){
+		int sum = a + b;
+		System.out.println(sum);
+	}
+
 }
 
 public class MethodTest extends Mother2{
@@ -22,8 +27,8 @@ public class MethodTest extends Mother2{
 	
 	public static void main(String[] args) {
 		Mother2 mt = new MethodTest(1); //하면? 뭐가나올까? 엄마1,난실행되겠지
-//		mt.test(2, 3);
-//		System.out.println(mt.a);
+		mt.test(2, 3);
+		System.out.println(mt.a); //상속과 상관 없음 mt의 데이터타입따라감
 		
 	}
 }

@@ -8,23 +8,23 @@ public class Food {
 	private int price;
 	private String etc;
 	
-	public Food(String namd, int price, String etc) {
+	public Food(String name, int price, String etc) {
 		super(); //빼도됨
 		this.name = name;
 		this.price = price;
 		this.etc = etc;
 	}
-	@override
+	@Override
 	public String toString() {
 		return "Food [name=" + name + ", price=" + price +", etc=" + etc +"]";
 	}
 	public static void addMenu(List<Food> menu, String name, int price, String etc) {
-		Food f = new Food();
-		menu.add(f);
+//		Food f = new Food();
+//		menu.add(f);
 	}
 	
 	public static void main(String[] args) {
-		List<Food> menus = new ArrayList<Food()>;
+		List<Food> menus = new ArrayList<Food>();
 		Food.addMenu(menus,"치킨",20000,"jmt");
 		
 		

@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="/bdi-web/jsp/book/book-insert_ok">
+	<form method="post" action="/bdi-web/jsp/book/book-insert_ok.jsp">
 		<table border="1">
 			<tr>
 				<th>카테고리</th>
@@ -32,7 +32,7 @@
 				<td><textarea name="bi_desc"></textarea>
 			</tr>
 			<tr>
-				<th colspan="2"><a href="/bdi-web/jsp/book/book-insert_ok"><button>입력하기</button></a></th>
+				<th colspan="2"><a href="/bdi-web/jsp/book/book-insert_ok.jsp"><button>입력하기</button></a></th>
 			</tr>	
 		</table>
 	</form>
