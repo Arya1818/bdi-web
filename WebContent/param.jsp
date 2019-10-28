@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="/bdi-web/param-map.jsp">
+	<form action="/bdi-web/jsp/param-map.jsp">
 		게임명 : <input type="text" name="gameName"><br>
 		장르 : <input type="checkbox" name="genre" value="Action">액션
 		<input type="checkbox" name="genre" value="RPG">RPG

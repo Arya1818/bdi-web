@@ -23,6 +23,7 @@ public String checkStr(String str, String targetStr){ //update화면에서 check
 <title>Insert title here</title>
 </head>
 <body>
+
 <%
 String sq = request.getParameter("seq");
 String sql = "select * from book_info where seq=?";
