@@ -15,7 +15,7 @@
 	<form method = "post" id="loginForm" action="/bdi-web/jsp/user/login-ok2.jsp"> <!-- 로그인은 예외로 post로 쓴다,  값이 가긴 하는데 주소로인해 가는게 아님 -->
 		아이디 : <input type="text" name="id" id="id" > <br> <!--value="입력해주세요" 가능  -->
 		비밀번호 : <input type = "password" name = "pwd" id="pwd"> <br>
-		<button type="button" onclick="login()">로그인</button> <!--타입이 버튼이면 submit을 안함  --> 
+		<button type="button" onclick="login()">로그인</button> <!--타입이 버튼이면 submit을 안함/submit도 이벤트 --> 
 		
 	</form>
 	<script>
